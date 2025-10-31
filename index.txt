@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>🇭🇰 香港沙田賽馬直播｜CM2 Bet Horse Racing</title>
+
+  <!-- 自動更新預覽圖（避免快取） -->
+  <script>
+    const timestamp = new Date().getTime();
+    document.write(`
+      <meta property="og:image" content="https://89092702a-code.github.io/cm2-live/livebanner.jpg?${timestamp}">
+    `);
+  </script>
+
+  <!-- Facebook / Open Graph meta -->
+  <meta property="og:title" content="🇭🇰 香港沙田賽馬直播 H.K Shatin Horse Racing Live">
+  <meta property="og:description" content="立即進入 Telegram 觀看 CM2 賽馬直播，掌握賽事實況與投注資訊！">
+  <meta property="og:url" content="https://89092702a-code.github.io/cm2-live/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 40px 10px;
+    }
+    h1 {
+      color: #ffd700;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    img {
+      width: 95%;
+      max-width: 750px;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 40px rgba(255,255,255,0.4);
+    }
+    #countdown {
+      font-size: 1.3rem;
+      margin-top: 25px;
+      color: #00ffcc;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🎥 CM2 香港沙田賽馬直播</h1>
+  <p>立即加入 Telegram，觀看現場賽馬與即時分析！</p>
+
+  <!-- 整張圖可點擊 -->
+  <a href="https://t.me/cm2bethorseracing?livestream" target="_blank">
+    <img src="livebanner.jpg" alt="香港沙田賽馬直播">
+  </a>
+
+  <!-- 倒數計時顯示 -->
+  <div id="countdown">⏳ 計算中...</div>
+
+  <footer>© 2025 CM2 Live Horse Racing</footer>
+
+  <script>
+    // 🔹 設定下一場直播時間（自行修改）
+    const nextRace = new Date("2025-11-02T12:45:00+08:00"); // 香港時間
+
+    const countdownEl = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = nextRace - now;
+
+      if (diff <= 0) {
+        countdownEl.textContent = "🏇 直播中！點擊上方圖片進入 Telegram 👉";
+        return;
+      }
+
+      const hours = Math.floor(diff / 1000 / 60 / 60);
+      const mins = Math.floor((diff / 1000 / 60) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      countdownEl.textContent = `⏱️ 距離開賽還有：${hours}小時 ${mins}分 ${secs}秒`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
