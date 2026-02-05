@@ -108,7 +108,16 @@ SHA TIN HORSE RACING
 
 <script>
 const titles=[
-"🇭🇰沙田賽馬直播中🔴 SHA TIN HORSE
+"🇭🇰沙田賽馬直播中🔴 SHA TIN HORSE RACING 🔴LIVE NOW",
+"🏇 正在直播｜點擊進入 Telegram"
+];
+let i=0;
+setInterval(()=>{
+document.title=titles[i%titles.length];
+i++;
+},1200);
+</script>
 
-
+</body>
+</html>
 
